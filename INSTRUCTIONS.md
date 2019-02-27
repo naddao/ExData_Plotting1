@@ -15,16 +15,16 @@ There are four R scripts to make a visualize of data from Individual household e
 > datasets, dplyr, data.table
 
 #### Files
-* README.txt - Detail of analysis process.
-* plot1.R - R script to plot histogram of data from household global minute-averaged active power(kilowatt) and save output as "plot1.png"
-* plot1.png - Visualize of plot from script plot1.R.
-* plot2.R - R script to plot data of time vs household global minute-averaged active power(kilowatt) and save output as "plot2.png"
-* plot2.png - Visualize of plot from script plot2.R.
-* plot3.R - R script to plot data of time vs (energy sub-metering-1, energy sub-metering-2, energy sub-metering-3) in watt-hour of active energy and save output as "plot3.png".
-* plot3.png - Visualize of plot from script plot3.R.
-* plot4.R - R script to plot data of time vs household global minute-averaged ractive power(kilowatt) and save output as "plot4.png"
-* plot4.png - Visualize of plot from script plot4.R.
-* extract_household_power_data.R -
+* <b>README.txt</b> - Detail of analysis process.
+* <b>plot1.R</b> - R script to plot histogram of data from household global minute-averaged active power(kilowatt) and save output as "plot1.png"
+* <b>plot1.png</b> - Visualize of plot from script plot1.R.
+* <b>plot2.R</b> - R script to plot data of time vs household global minute-averaged active power(kilowatt) and save output as "plot2.png"
+* <b>plot2.png</b> - Visualize of plot from script plot2.R.
+* <b>plot3.R</b> - R script to plot data of time vs (energy sub-metering-1, energy sub-metering-2, energy sub-metering-3) in watt-hour of active energy and save output as "plot3.png".
+* <b>plot3.png</b> - Visualize of plot from script plot3.R.
+* <b>plot4.R</b> - R script to plot data of time vs household global minute-averaged ractive power(kilowatt) and save output as "plot4.png"
+* <b>plot4.png</b> - Visualize of plot from script plot4.R.
+* <b>extract_household_power_data.R</b> - R script which contains common function which have been used for all 4 ploting scripts. Example function such as filtered only specify mesurement and create temporary file, load data from temporary file, convert data string to POSIXct date object
 
 
 #### Steps of analysis
