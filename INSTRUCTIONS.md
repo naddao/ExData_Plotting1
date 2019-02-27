@@ -28,14 +28,14 @@ There are four R scripts to make a visualize of data from Individual household e
 
 
 #### Steps of analysis
-1. Read data from dataset(9 columns available: Date, Time, Global_active_power, Global_reactive_power, Voltage, Global_intensity, Sub_metering_1, Sub_metering_2, Sub_metering_3)
-2. Filter data only 2 days ("01/02/2007 00:00:00" to "03/02/2007 00:00:00")
-3. From Filter data from 2, combine string of column Date and Time and make a new column "DateTime"
-4. Select specify mesurements using for make a plot which is diffrent in each script(for example plot1.R select mesurement of Date, Time and Global_active_power)
-5. Create temporary file for dataset which is result from 4, 5. Then remove unused variables to free up memory usage
+1. Read data from dataset(9 columns available: <b>"Date"</b>, <b>"Time"</b>, <b>"Global_active_power"</b>, <b>"Global_reactive_power"</b>, <b>"Voltage"</b>, <b>"Global_intensity"</b>, <b>"Sub_metering_1"</b>, <b>"Sub_metering_2"</b>, <b>"Sub_metering_3"</b>)
+2. Filter data only 2 days (<b>"01/02/2007 00:00:00"</b> to <b>"03/02/2007 00:00:00"</b>)
+3. From Filter data from 2, combine string of column <b>"Date"</b> and <b>"Time"</b> and make a new column <b>"DateTime"</b>
+4. Select specify mesurements using for make a plot which is diffrent in each script(for example plot1.R select mesurements of <b>"Date"</b>, <b>"Time"</b> and <b>"Global_active_power"</b>)
+5. Create temporary file for dataset which is result from 4, 5. Then remove unused variables to free up memory usage.
 6. Load data from temporary file( create from 5)
-7. Generate label info use on DateTime axis by using start_time=01/02/2007 00:00:00 and end_time=03/02/2007 00:00:00 which label every 1 day. Results give sequence of weekday name as("Thu", "Fri", "Sat")
-8. Make a plot from specify which is different in each R script and save graph output to *.png file
+7. Generate label info use on DateTime axis by using <b>start_time="01/02/2007 00:00:00"</b> and <b>end_time="03/02/2007 00:00:00"</b> which label every 1 day. Results give sequence of weekday name <b>as("Thu", "Fri", "Sat")</b>
+8. Make a plot from specify which is different in each R script and save graph output to <b>*.png</b> file
 
 
 
