@@ -6,7 +6,7 @@ There are four R scripts to make a visualize of data from Individual household e
 `source("plot1.R")`
 2. plot data of time vs household global minute-averaged active power(kilowatt) and save output as "plot2.png"
 `source("plot2.R")`
-3. plot data of time vs (energy sub-metering-1, energy sub-metering-2, energy sub-metering-3) in watt-hour of active energy and save output as "plot3.png". Descriptions of each mesurement available in "README.md"\s
+3. plot data of time vs (energy sub-metering-1, energy sub-metering-2, energy sub-metering-3) in watt-hour of active energy and save output as "plot3.png". Descriptions of each mesurement available in "README.md"
 `source("plot3.R")`
 4. plot data of time vs household global minute-averaged reactive power(kilowatt) and save output as "plot4.png"
 `source("plot4.R")`
