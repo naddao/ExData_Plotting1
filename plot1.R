@@ -6,17 +6,19 @@
 ## histogram : frequency of Global active power
 ###########################################################
 
-library(data.table)
-library(dplyr)
-library(datasets)
 source("extract_household_power_data.R")
 
-source_file <- "household_power_consumption.txt"
+# download datasets and extract data
+dataset_url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+prefix_path <- download_datasets(dataset_url)
+
+# specify dataset file path and specify measurements to be selected
+dataset_file <- paste(prefix_path, "household_power_consumption.txt", sep="")
 selected_columns <- c("Date", "Time", "Global_active_power")
 process_columns <- c("DateTime", "Global_active_power")
 
 # extract only data using for plot 
-plot2_data <- extract_plotting_data(source_file, selected_columns, process_columns)
+plot2_data <- extract_plotting_data(dataset_file, selected_columns, process_columns)
 
 # filter data only 2 specify days
 print("----- Filter data only for 2 specify days ------")
@@ -31,8 +33,9 @@ weekday_seq <- seq(start_time, end_time, by="1 day")
 # remove unused variable to free up memory
 rm(plot2_data, start_time, end_time)
 
+print("----- Plot data ------")
+png("plot1.png", width=480, height=480, bg=NA)
 par(mfrow=c(1, 1))
-png(filename="plot1.png", width=480, height=480, bg=NA)
 with(filtered_data, {
     # plot histogram of global active power
     hist(Global_active_power, col = "red", xlab="Global Active Power (kilowatts)",main = "Global Active Power")  
@@ -40,4 +43,4 @@ with(filtered_data, {
 dev.off()
 
 # remove unused variable to free up memory
-rm(filtered_data)
+rm(filtered_data, weekday_seq)

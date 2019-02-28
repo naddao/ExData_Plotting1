@@ -6,17 +6,20 @@
 ## line graph : DateTime vs (Sub_metering_1(black line), Sub_metering_1(red line), Sub_metering_1(blue line) )
 ###########################################################
 
-library(data.table)
-library(dplyr)
-library(datasets)
 source("extract_household_power_data.R")
 
-source_file <- "household_power_consumption.txt"
+# download datasets and extract data
+dataset_url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+prefix_path <- download_datasets(dataset_url)
+
+# specify dataset file path and specify measurements to be selected
+dataset_file <- paste(prefix_path, "household_power_consumption.txt", sep="")
+
 selected_columns <- c("Date", "Time", "Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
 process_columns <- c("DateTime", "Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
 
 # extract only data using for plot 
-plot3_data <- extract_plotting_data(source_file, selected_columns, process_columns)
+plot3_data <- extract_plotting_data(dataset_file, selected_columns, process_columns)
 
 # filter data only 2 specify days
 print("----- Filter data only for 2 specify days ------")
